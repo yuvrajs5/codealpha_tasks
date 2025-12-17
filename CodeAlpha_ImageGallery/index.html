@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-container">
+            <div class="hero-label"><span class="hero-icon">📷</span> GALLERY</div>
+            <h1 class="hero-title">Visual <span>Stories</span></h1>
+            <p class="hero-text">A curated collection of moments captured through the lens. Explore nature, architecture, urban life, and portraits.</p>
+        </div>
+    </section>
+    <!-- Filter Buttons -->
+    <div class="filters">
+        <button onclick="filterImages('all')">All</button>
+        <button onclick="filterImages('nature')">Nature</button>
+        <button onclick="filterImages('animals')">Animals</button>
+        <button onclick="filterImages('travel')">Travel</button>
+    </div>
+
+    <!-- Gallery -->
+    <div class="gallery" id="gallery">
+        <img loading="lazy" src="https://picsum.photos/id/1015/600/400" class="nature" />
+        <img loading="lazy" src="https://picsum.photos/id/1025/600/400" class="animals" />
+        <img loading="lazy" src="https://picsum.photos/id/1040/600/400" class="travel" />
+        <img loading="lazy" src="https://picsum.photos/id/1056/600/400" class="nature" />
+        <img loading="lazy" src="https://picsum.photos/id/1062/600/400" class="animals" />
+        <img loading="lazy" src="https://picsum.photos/id/1074/600/400" class="travel" />
+    </div>
+
+    <!-- Lightbox View -->
+    <div id="lightbox">
+        <span id="closeBtn" onclick="closeLightbox()">&times;</span>
+        <img id="lightboxImg" src="" />
+        <div class="nav-btn">
+            <button onclick="prevImage()">Prev</button>
+            <button onclick="nextImage()">Next</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
